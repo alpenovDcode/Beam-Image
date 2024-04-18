@@ -6,17 +6,76 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>600</height>
+    <width>1037</width>
+    <height>660</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <layout class="QHBoxLayout" name="horizontalLayout_2">
-    <item>
-     <layout class="QHBoxLayout" name="horizontalLayout"/>
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item alignment="Qt::AlignHCenter">
+       <widget class="QLabel" name="Photo">
+        <property name="minimumSize">
+         <size>
+          <width>600</width>
+          <height>350</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>500</width>
+          <height>400</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>12</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Фотография </string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="verticalSpacer">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeType">
+         <enum>QSizePolicy::Minimum</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item alignment="Qt::AlignHCenter">
+       <widget class="QLabel" name="description">
+        <property name="minimumSize">
+         <size>
+          <width>600</width>
+          <height>300</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>12</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Описание фотографии</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
     </item>
    </layout>
   </widget>
@@ -25,94 +84,22 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>800</width>
+     <width>1037</width>
      <height>21</height>
     </rect>
    </property>
-   <widget class="QMenu" name="data_menu">
+   <widget class="QMenu" name="menu">
     <property name="title">
-     <string>Данные</string>
+     <string>Загрузка</string>
     </property>
-    <addaction name="take_data"/>
+    <addaction name="action"/>
    </widget>
-   <widget class="QMenu" name="calc_menu">
-    <property name="title">
-     <string>Расчеты</string>
-    </property>
-    <addaction name="calc_action"/>
-   </widget>
-   <addaction name="data_menu"/>
-   <addaction name="calc_menu"/>
+   <addaction name="menu"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
-  <action name="action_new_project">
+  <action name="action">
    <property name="text">
-    <string>Создать проект</string>
-   </property>
-  </action>
-  <action name="action_open_project">
-   <property name="text">
-    <string>Открыть проект</string>
-   </property>
-  </action>
-  <action name="action_delete_project">
-   <property name="text">
-    <string>Удалить проект</string>
-   </property>
-  </action>
-  <action name="action_import_coords_plast">
-   <property name="text">
-    <string>Координаты пластопересечений</string>
-   </property>
-  </action>
-  <action name="action_import_MER">
-   <property name="text">
-    <string>МЭР</string>
-   </property>
-  </action>
-  <action name="action_import_wells">
-   <property name="text">
-    <string>Фонд скважин</string>
-   </property>
-  </action>
-  <action name="action_export_table_result_wells_candidates">
-   <property name="text">
-    <string>Таблица с результатами подбора скважин-кандидатов</string>
-   </property>
-  </action>
-  <action name="action_export_voronoi_polygons">
-   <property name="text">
-    <string>Полигоны Вороного</string>
-   </property>
-  </action>
-  <action name="action_export_graphics_debits">
-   <property name="text">
-    <string>Графики дебитов окружающих скважин</string>
-   </property>
-  </action>
-  <action name="action_save_project">
-   <property name="text">
-    <string>Сохранить проект</string>
-   </property>
-  </action>
-  <action name="action_close_project">
-   <property name="text">
-    <string>Закрыть проект</string>
-   </property>
-  </action>
-  <action name="take_data">
-   <property name="text">
-    <string>Импорт данных</string>
-   </property>
-  </action>
-  <action name="calc">
-   <property name="text">
-    <string>Расчет</string>
-   </property>
-  </action>
-  <action name="calc_action">
-   <property name="text">
-    <string>Запуск расчетов</string>
+    <string>Загрузить фото</string>
    </property>
   </action>
  </widget>

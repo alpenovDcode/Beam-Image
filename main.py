@@ -1,15 +1,27 @@
-import sys
-from datetime import datetime
+# -*- coding: utf-8 -*-
 
-from PyQt5.QtCore import QTranslator, QLibraryInfo
-from PyQt5.QtWidgets import QApplication, QMessageBox
+# Form implementation generated from reading ui file 'main.ui'
+#
+# Created by: PyQt5 UI code generator 5.14.1
+#
+# WARNING! All changes made in this file will be lost!
+
+from PyQt5 import QtCore, QtGui, QtWidgets
+from PyQt5.QtGui import *
+from PyQt5.QtWidgets import *
+from PyQt5.QtCore import *
+from PyQt5.QtPrintSupport import *
+from PyQt5.QtMultimedia import *
+from PyQt5.QtMultimediaWidgets import *
+
+import os
+import sys
+import datetime
+import time
 
 from mainform import MainForm
 
-
 def main():
-    """Главная функция"""
-
     def replaceSlash(filePath):
         platform = sys.platform
         slashMap = {'win32': '\\',
@@ -27,12 +39,6 @@ def main():
             window, "Ошибка", "Возникла непредвиденная ошибка",
             QMessageBox.Cancel
         )
-        file = replaceSlash("Logs\\log_for_develop.txt")
-        with open(file, "a", encoding="utf-8") as f:
-            f.write(
-                "[" + str(datetime.now().replace(
-                    microsecond=0)) + "]" + " " + "CRITICAL" + " " + "Main" + ": " + str(
-                    value) + "\n")
         window.progress_bar.setVisible(False)
         window.statusBar().showMessage('')
         sys.__excepthook__(type, value, tback)
@@ -50,7 +56,6 @@ def main():
     sys.excepthook = my_excepthook
 
     app.exec_()
-
 
 if __name__ == '__main__':
     main()
